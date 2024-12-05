@@ -5,3 +5,8 @@
   margin: 0px;
   box-sizing: border-box;
 }
+
+.form-row:has(input:required):before {
+  content: "*";
+  color: red;
+}
