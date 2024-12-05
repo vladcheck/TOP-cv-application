@@ -2,7 +2,7 @@ import { InputRow } from "./Input";
 
 export function Form(props) {
   return (
-    <>
+    <form method=".">
       <h1>Create your resume</h1>
       <h2>General</h2>
       <InputRow label="Name" type="text" required="true" />
@@ -18,6 +18,6 @@ export function Form(props) {
       <InputRow label="Position responsibilities" type="text" required="true" />
       <InputRow label="From date" type="date" required="true" />
       <InputRow label="Until date" type="date" required="true" />
-    </>
+    </form>
   );
 }

@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+Form {
+  border: 1px solid black;
+}
+
 .form-row:has(input:required):before {
   content: "*";
   color: red;
