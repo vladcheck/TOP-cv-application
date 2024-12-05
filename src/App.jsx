@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { Form } from "./Components/Form";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  return (
+    <>
+      <Form></Form>
+    </>
+  );
 }
 
 export default App;
