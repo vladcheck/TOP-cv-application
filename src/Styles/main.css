@@ -53,3 +53,20 @@ form h2 {
   top: 0px;
   left: -10px;
 }
+
+button {
+  width: max-content;
+  padding: 4px 10px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(106, 188, 255);
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: rgb(155, 210, 255);
+}
+
+button:active {
+  background-color: rgb(211, 235, 255);
+}
