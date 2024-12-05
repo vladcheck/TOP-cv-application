@@ -1,4 +1,4 @@
-export function InputRow(props) {
+export default function InputRow(props) {
   if (props.required === "true")
     return (
       <div className="form-row">

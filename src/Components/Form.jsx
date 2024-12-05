@@ -1,6 +1,10 @@
-import { InputRow } from "./Input";
+import { useState } from "react";
+import ExperienceField from "./ExperienceField";
+import InputRow from "./Input";
 
 export function Form(props) {
+  let [experienceFields, setExperienceFields] = useState([]);
+
   return (
     <form method=".">
       <h1>Create your resume</h1>
@@ -14,12 +18,16 @@ export function Form(props) {
       <InputRow label="Title of study" type="text" />
       <InputRow label="Date of study" type="date" />
       <h2>Experience</h2>
-      <button>Add experience</button>
-      <InputRow label="Company" type="text" required="true" />
-      <InputRow label="Position" type="text" required="true" />
-      <InputRow label="Position responsibilities" type="text" required="true" />
-      <InputRow label="From date" type="date" required="true" />
-      <InputRow label="Until date" type="date" required="true" />
+      <button
+        onClick={() => {
+          setExperienceFields([...experienceFields, ExperienceField()]);
+        }}
+      >
+        Add experience
+      </button>
+      <div id="experience-section">
+        {experienceFields.map((field) => field)}
+      </div>
       <button type="submit">Submit</button>
     </form>
   );
