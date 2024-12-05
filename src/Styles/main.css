@@ -25,6 +25,7 @@ form {
   gap: 5px;
   border: 1px solid black;
   width: 500px;
+  padding: 10px;
 }
 
 form h1 {
