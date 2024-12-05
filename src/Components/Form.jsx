@@ -4,6 +4,7 @@ export function Form(props) {
   return (
     <form method=".">
       <h1>Create your resume</h1>
+      <hr />
       <h2>General</h2>
       <InputRow label="Name" type="text" required="true" />
       <InputRow label="Email" type="email" required="true" />
