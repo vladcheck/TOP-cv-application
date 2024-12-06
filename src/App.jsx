@@ -3,11 +3,12 @@ import { Form } from "./Components/Form";
 import Resume from "./Components/Resume";
 
 function App() {
-  let [formSubmitted, setFormSubmitted] = useState(false);
+  let [formValues, setFormValues] = useState({});
+
   return (
     <>
-      <Form id="resumeForm" setFormSubmitted={setFormSubmitted} />
-      {formSubmitted && <Resume />}
+      <Form id="resumeForm" setFormValues={setFormValues} />
+      {Object.keys(formValues).length > 0 && <Resume formValues={formValues} />}
     </>
   );
 }

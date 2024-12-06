@@ -1,11 +1,12 @@
-export default function Resume({ values }) {
-  return (
-    <section id="resume">
-      {values.map((key) => (
-        <div key={key}>
-          {key}:{values[key]}
+export default function Resume({ formValues }) {
+  const children = [];
+  for (let [key, value] of Object.entries(formValues)) {
+    if (value)
+      children.push(
+        <div>
+          {key}:{value}
         </div>
-      ))}
-    </section>
-  );
+      );
+  }
+  return <section id="resume">{children}</section>;
 }
