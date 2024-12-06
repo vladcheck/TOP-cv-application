@@ -7,25 +7,16 @@ export default function InputRow(props) {
     setValue(e.target.value);
   }
 
-  if (props.required === "true")
-    return (
-      <div className="form-row">
-        <label>
-          {props.label}
-          <input
-            type={props.type}
-            value={value}
-            onChange={changeValueOnClick}
-            required
-          />
-        </label>
-      </div>
-    );
   return (
     <div className="form-row">
       <label>
         {props.label}
-        <input type={props.type} onChange={changeValueOnClick} value={value} />
+        <input
+          type={props.type}
+          value={value}
+          onChange={changeValueOnClick}
+          required={props.required}
+        />
       </label>
     </div>
   );
